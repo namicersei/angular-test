@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-xs-12">
+
+    <!--<input type="text" placeholder="name" [(ngModel)]="newServerName">
+    <input type="text" placeholder="content" [(ngModel)]="newServerContent">-->
+    <input type="text" placeholder="name" #serverName>
+    <input type="text" placeholder="content" #serverContent>
+    <input type="button" value="add" (click)="onAddServer(serverName,serverContent)">
+
+  </div>
+</div>

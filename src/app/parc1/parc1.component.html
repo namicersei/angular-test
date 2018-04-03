@@ -1,0 +1,9 @@
+<button class="btn btn-primary" (click)="addItem()">Add item</button>
+
+<p
+  *ngFor="let item of itemArray, let i = index"
+  [ngClass]="{odd: i %2 == 0 }">
+  {{ item }}
+</p>
+
+

@@ -1,0 +1,18 @@
+<p>{{addNew}}</p>
+<!--<input type="text" placeholder="ServerName" (input)="onAddServerName($event )">-->
+<input type="text" placeholder="ServerName" [(ngModel)]= "newServerName">
+<br>
+<button class="btn btn-primary" [disabled]="!addNew" (click)="onCreateServer()" >{{addstatus}}</button>
+<br>
+<!--<p>{{ creationStatus }}</p>-->
+<p *ngIf="serverCreated">{{creationStatus}} </p>
+<app-server *ngFor=" let server  of serverlist"></app-server>
+<!--
+<p *ngIf="serverCreated; else noServer">{{creationStatus}} </p>
+<ng-template #noServer>
+  <p>
+      {{creationStatus}}
+  </p>
+</ng-template>
+-->
+

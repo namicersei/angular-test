@@ -1,0 +1,28 @@
+<!--
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <input type="text" name="testext" [(ngModel)] = "title">
+      <p>{{title}}</p>
+      <hr>
+      <app-serverlist></app-serverlist>
+      <hr>
+      <app-data-binding></app-data-binding>
+      <hr>
+      <app-parc1></app-parc1>
+    </div>
+  </div>
+</div>
+-->
+
+<app-header (selection)="navigateTo($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes *ngIf=" currentComponent === 'recipe' "></app-recipes>
+      <app-shopping-list *ngIf=" currentComponent !== 'recipe' "></app-shopping-list>
+    </div>
+  </div>
+</div>
+
+

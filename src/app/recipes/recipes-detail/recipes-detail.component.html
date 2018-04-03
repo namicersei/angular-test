@@ -1,0 +1,35 @@
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<div class="row">
+  <div class="col-xs-12">
+    <img [src]="myRecipe.imagePath " alt="{{myRecipe.name}}" class="img-responsive">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{myRecipe.name}}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn-group" appDropDownDirective>
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Manage Recipe<span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">To shopping list</a></li>
+        <li><a href="#">Edit recipe</a></li>
+        <li><a href="#">Delete recipe</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    {{myRecipe.description }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    Ingredients
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<button class="btn btn-primary" (click)="showEven = !showEven">Click</button>
+<div class="row" *ngIf="showEven">
+  <p *ngFor="let even of evenNo">
+    {{even}}
+  </p>
+</div>
+<!--<div class="row" *ngIf="!showEven">
+  <p *ngFor="let odd of oddNo">
+    {{odd}}
+  </p>
+</div>-->
+<div class="row" *appDirTestUnlessDirective="showEven">
+  <p *ngFor="let odd of oddNo">
+    {{odd}}
+  </p>
+</div>
+<p appDirTestDirective>My Directive Test</p>
+<p appDirTestTwoDirective [defaultColor]="'yellow'" [highlightColor]="'blue'">My Directive Test Two</p>
+<div [ngSwitch]="switchVal">
+  <p *ngSwitch="5">Value is 5</p>
+  <p *ngSwitch="10">Value is 10</p>
+  <p *ngSwitch="15">Value is 15</p>
+  <p *ngSwitch="20">Value is 20</p>
+  <p *ngSwitchDefault>Default</p>
+</div>
+<!-- if you are passing string you can do so highlightColor = "blue" i.e. without [] and '' -->

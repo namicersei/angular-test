@@ -1,0 +1,12 @@
+<!--Add new Servers or blueprints!
+Server Name Server Content
+Add Server Add Server Blueprint
+
+{{ element.name }}
+{{ element.content }} {{ element.content }}-->
+<app-cockpit (cockpitEvent)="cockpitToModule($event)"></app-cockpit>
+<app-server-element
+  *ngFor="let serverElement of serverElements"
+  [element]="serverElement">
+</app-server-element>
+<p #childViewTest>Test Para</p>
